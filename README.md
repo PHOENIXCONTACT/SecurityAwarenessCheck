@@ -1,0 +1,90 @@
+# PHOENIX CONTACT SAFETY & SECURITY SCHNELLCHECKS 
+=========================================================================
+
+APP-VERSION 2.4
+
+INHALT
+  index.html             Die App auf Deutsch (alle Inhalte, Bilder und Logik enthalten)
+  en.html / fr.html / es.html   Dieselbe App auf Englisch, Französisch, Spanisch
+  config.js              EINSTELLUNGEN: E-Mail-Empfänger, Versandart, Formulartext
+  manifest.webmanifest   App-Beschreibung (Name, Icon, Farben, Kurzbefehle)
+  sw.js                  Service Worker für den Offline-Betrieb
+  icons/                 App-Icons für Home-Bildschirm und Browser
+
+BEREITSTELLEN
+  Damit sich die App installieren lässt, muss der Ordner über HTTPS
+  erreichbar sein. Den kompletten Ordner unverändert hochladen, z. B. auf:
+    - den Firmen-Webserver bzw. das Intranet (eigener Unterordner)
+    - GitHub Pages, Netlify oder Azure Static Web Apps
+  Ein Server-Programm ist nicht nötig, es sind nur statische Dateien.
+
+  Zum lokalen Testen am PC:   python -m http.server 8000
+  und dann http://localhost:8000 im Browser öffnen.
+
+INSTALLIEREN
+  iPhone / iPad:  Seite in Safari öffnen > Teilen > „Zum Home-Bildschirm“
+  Android:        Seite in Chrome öffnen > „App installieren“ (Button in der
+                  App oder im Chrome-Menü)
+  Windows / Mac:  Chrome oder Edge > Installieren-Symbol in der Adressleiste
+
+  Nach dem ersten Öffnen funktioniert die App auch ohne Internet.
+  Die Antworten werden nur auf dem jeweiligen Gerät gespeichert.
+
+SPRACHEN
+  Oben rechts lässt sich zwischen DE, EN, FR und ES wechseln. Die Antworten
+  bleiben dabei erhalten. Direktlinks für Kunden:
+    .../index.html (DE)  .../en.html  .../fr.html  .../es.html
+  Die installierte App startet in der zuletzt gewählten Sprache.
+  Bildschirm und PDF-Bericht erscheinen in der Sprache des Kunden. Die
+  E-Mail an Phoenix Contact behält deutsche Feldnamen und enthält das
+  Feld „Sprache“; die Antworten darin stehen in der Kundensprache.
+  Die NIS-2-Inhalte beziehen sich auf die deutsche Umsetzung (BSI, BSIG).
+
+FORMULAR, E-MAIL UND PDF-BERICHT
+  Im letzten Schritt jedes Checks füllt der Kunde das Formular aus
+  (inkl. Feld „Ansprechpartner“) und hat drei Möglichkeiten:
+    - „Per E-Mail senden“   -> geht an services@phoenixcontact.de
+    - „Als PDF exportieren“ -> PDF mit Kontaktdaten und Einwilligung Ja/Nein
+    - „QR-Code anzeigen“    -> Bericht auf anderem Gerät öffnen
+  Die E-Mail enthält alle Angaben, das Ergebnis, den PDF-Bericht als echten
+  Dateianhang und denselben Bericht zusätzlich als Text. Die Mail enthält
+  keinen Link auf die App bzw. GitHub. Beim Senden wechselt die Seite kurz
+  zu FormSubmit und kehrt danach automatisch in die App zurück.
+  Ohne Internet wird die Mail samt PDF gespeichert; sobald wieder eine
+  Verbindung besteht, erscheint „Jetzt senden“.
+  „Als PDF exportieren“ erzeugt dieselbe PDF-Datei (iPad/iPhone: Teilen-
+  Dialog zum Sichern in „Dateien“, per AirDrop oder Mail).
+
+  WICHTIG – einmalige Freischaltung (Versandart 'formsubmit'):
+    Beim allerersten Senden verschickt FormSubmit.co eine Aktivierungs-Mail
+    an services@phoenixcontact.de. Dort einmal „Activate Form“ klicken, erst
+    danach kommen die Anfragen an. Die Daten laufen dabei über den Dienst
+    FormSubmit.co (USA) – bitte vorab mit Datenschutz/IT abstimmen.
+    Alternativen in config.js: 'endpoint' (eigener Server / Power Automate)
+    oder 'mailto' (öffnet das Mailprogramm des Geräts).
+
+  Ohne Internet wird die E-Mail auf dem Gerät gespeichert und automatisch
+  gesendet, sobald wieder eine Verbindung besteht.
+
+  Mit „Alles zurücksetzen“ (Startseite oder Footer) werden alle Antworten
+  und Kontaktdaten vom Gerät gelöscht – z. B. vor dem nächsten Kunden.
+
+QR-CODE: BERICHT AUF ANDEREM GERÄT ÖFFNEN
+  Im letzten Schritt „QR-Code anzeigen“ tippen und den Code mit dem anderen
+  Gerät scannen. Dort öffnet sich der fertige Bericht und lässt sich als PDF
+  speichern.
+
+  Der Code enthält Antworten und Kontaktdaten direkt im Link (nach dem #).
+  Dieser Teil wird nicht an den Server übertragen, es läuft also nichts
+  über GitHub. Wer den Code scannt, sieht allerdings alle Angaben.
+
+  Voraussetzung: Die App ist über ihre Webadresse geöffnet (z. B. GitHub
+  Pages). Bei der lokalen Einzeldatei in config.js „appUrl“ eintragen.
+
+AKTUALISIEREN
+  Neue Version hochladen und in sw.js die VERSION erhöhen. Die App meldet
+  beim nächsten Start „Neue Version verfügbar“.
+
+OHNE SERVER
+  index.html lässt sich auch direkt per Doppelklick öffnen. Dann läuft die
+  App im Browser, ist aber nicht installierbar und nicht offline-fähig.
