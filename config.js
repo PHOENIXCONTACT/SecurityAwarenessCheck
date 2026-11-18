@@ -22,7 +22,7 @@ window.PC_CONFIG = {
   //   'endpoint'   – eigener Firmen-Server oder Power-Automate-Flow:
   //                  die Daten werden als JSON per POST an "endpoint" geschickt
   //   'mailto'     – öffnet das E-Mail-Programm des Geräts mit fertiger Nachricht
-  versand: 'formsubmit',
+  versand: 'mailapp',
 
   // Nur bei versand: 'endpoint' – Adresse, die die Daten entgegennimmt
   endpoint: '',

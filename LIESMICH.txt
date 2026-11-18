@@ -1,4 +1,4 @@
-PHOENIX CONTACT SAFETY & SECURITY SCHNELLCHECKS – APP-VERSION 2.10
+PHOENIX CONTACT SAFETY & SECURITY SCHNELLCHECKS – APP-VERSION 2.11
 =========================================================================
 
 INHALT
@@ -44,18 +44,18 @@ FORMULAR, E-MAIL UND PDF-BERICHT
     - „Per E-Mail senden“   -> geht an services@phoenixcontact.com
     - „Als PDF exportieren“ -> PDF mit Kontaktdaten und Einwilligung Ja/Nein
     - „QR-Code anzeigen“    -> Bericht auf anderem Gerät öffnen
-  VERSAND PER E-MAIL (Standard, versand: 'formsubmit')
-  „Per E-Mail senden“ verschickt die Mail direkt über den Dienst FormSubmit
-  an services@phoenixcontact.com – mit dem PDF-Bericht als Dateianhang und
-  dem Bericht zusätzlich als Text. Die Seite wechselt dabei kurz zu
-  FormSubmit und kehrt danach in die App zurück.
-  WICHTIG – einmalige Freischaltung: Beim allerersten Senden schickt
-  FormSubmit eine Mail „Activate Form“ an services@phoenixcontact.com.
-  Erst nach dem Klick auf den Link darin werden Mails zugestellt
-  (ggf. Spam/Quarantäne prüfen, Absender submissions@formsubmit.co).
-  Ohne Internet wird die Mail gespeichert; sobald wieder eine Verbindung
-  besteht, erscheint „Jetzt senden“.
-  Alternative (versand: 'mailapp'): Versand über die Mail-App des Geräts.
+  VERSAND PER E-MAIL ÜBER DAS EIGENE POSTFACH (Standard, versand: 'mailapp')
+  Die Mail geht vom eigenen Postfach des Geräts an services@phoenixcontact.com,
+  das PDF ist direkt angehängt – nichts muss von Hand angehängt werden.
+    iPad / iPhone / Android / Mac:
+      Teilen-Menü mit PDF → „Mail“ bzw. „Outlook“ wählen. Text und PDF sind
+      drin; die Adresse ist kopiert: ins Feld „An“ tippen → „Einsetzen“.
+    Windows-PC:
+      Es entsteht ein fertiger Mail-Entwurf (.eml) mit Empfänger, Betreff,
+      Text und PDF-Anhang. Datei anklicken → Outlook öffnet die Mail
+      sendebereit → „Senden“.
+      (Funktioniert mit dem klassischen Outlook. Das „neue Outlook“ öffnet
+      .eml-Dateien nur zum Lesen.)
 
   IM ORDNER ABLEGEN
   „Im Ordner ablegen“ speichert den PDF-Bericht und eine Textdatei (alle
