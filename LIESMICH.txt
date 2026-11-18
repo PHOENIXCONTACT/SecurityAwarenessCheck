@@ -1,4 +1,4 @@
-PHOENIX CONTACT SAFETY & SECURITY SCHNELLCHECKS – APP-VERSION 2.8
+PHOENIX CONTACT SAFETY & SECURITY SCHNELLCHECKS – APP-VERSION 2.9
 =========================================================================
 
 INHALT
@@ -41,25 +41,21 @@ SPRACHEN
 FORMULAR, E-MAIL UND PDF-BERICHT
   Im letzten Schritt jedes Checks füllt der Kunde das Formular aus
   (inkl. Feld „Ansprechpartner“) und hat drei Möglichkeiten:
-    - „Per E-Mail senden“   -> geht an services@phoenixcontact.de
+    - „Per E-Mail senden“   -> geht an services@phoenixcontact.com
     - „Als PDF exportieren“ -> PDF mit Kontaktdaten und Einwilligung Ja/Nein
     - „QR-Code anzeigen“    -> Bericht auf anderem Gerät öffnen
-  VERSAND ÜBER DIE MAIL-APP DES GERÄTS (Standard, versand: 'mailapp')
-  Die Mail wird mit dem eigenen Mail-Account des Geräts verschickt.
-    iPad / iPhone / Android:
-      „Per E-Mail senden“ öffnet das Teilen-Menü mit dem PDF-Bericht.
-      „Mail“ oder „Outlook“ wählen. Betreff-Angaben, alle Formulardaten und
-      der Bericht als Text stehen in der Mail, das PDF hängt an.
-      Die Adresse services@phoenixcontact.de ist bereits kopiert:
-      ins Feld „An“ tippen → „Einsetzen“ → Senden.
-    Computer (Windows/Mac):
-      Das Mailprogramm öffnet sich mit Empfänger, Betreff und Text.
-      Das PDF wird gleichzeitig gespeichert (Ordner „Downloads“) und muss
-      noch in die Mail gezogen bzw. angehängt werden.
-  Voraussetzung: Auf dem Gerät ist ein Mail-Konto eingerichtet.
-  Die Mail enthält keinen Link auf die App bzw. GitHub.
-  „Als PDF exportieren“ erzeugt dieselbe PDF-Datei (iPad/iPhone: Teilen-
-  Dialog zum Sichern in „Dateien“, per AirDrop oder Mail).
+  VERSAND PER E-MAIL (Standard, versand: 'formsubmit')
+  „Per E-Mail senden“ verschickt die Mail direkt über den Dienst FormSubmit
+  an services@phoenixcontact.com – mit dem PDF-Bericht als Dateianhang und
+  dem Bericht zusätzlich als Text. Die Seite wechselt dabei kurz zu
+  FormSubmit und kehrt danach in die App zurück.
+  WICHTIG – einmalige Freischaltung: Beim allerersten Senden schickt
+  FormSubmit eine Mail „Activate Form“ an services@phoenixcontact.com.
+  Erst nach dem Klick auf den Link darin werden Mails zugestellt
+  (ggf. Spam/Quarantäne prüfen, Absender submissions@formsubmit.co).
+  Ohne Internet wird die Mail gespeichert; sobald wieder eine Verbindung
+  besteht, erscheint „Jetzt senden“.
+  Alternative (versand: 'mailapp'): Versand über die Mail-App des Geräts.
 
   IM ORDNER ABLEGEN
   „Im Ordner ablegen“ speichert den PDF-Bericht und eine Textdatei (alle

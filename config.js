@@ -5,7 +5,7 @@
 window.PC_CONFIG = {
 
   // Empfänger der E-Mails aus dem Formular
-  empfaenger: 'services@phoenixcontact.de',
+  empfaenger: 'services@phoenixcontact.com',
 
   // Optional: Kopie an weitere Adressen, durch Komma getrennt
   kopie: '',
@@ -22,7 +22,7 @@ window.PC_CONFIG = {
   //   'endpoint'   – eigener Firmen-Server oder Power-Automate-Flow:
   //                  die Daten werden als JSON per POST an "endpoint" geschickt
   //   'mailto'     – öffnet das E-Mail-Programm des Geräts mit fertiger Nachricht
-  versand: 'mailapp',
+  versand: 'formsubmit',
 
   // Nur bei versand: 'endpoint' – Adresse, die die Daten entgegennimmt
   endpoint: '',
